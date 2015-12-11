@@ -1,4 +1,4 @@
----
+﻿---
 layout:     post
 title:      Using thumbnails
 date:       2014-06-08 12:32:18

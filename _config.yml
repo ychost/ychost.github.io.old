@@ -1,5 +1,5 @@
 # Site settings
-title: "夏天"
+title: "Tesla"
 email: ychost@outlook.com
 description: ""
 baseurl: ""
@@ -10,7 +10,10 @@ title_image: "/avatar/avatar_Tesla.jpg"
 baidu_analytics: "http://sitecenter.baidu.com/"
 #评论账户
 #disqus_account: cartenoire
-uyan_account: uyan
+
+#评论系统 畅言 or 友言
+comment_os: changyan
+#commentos:uyan
 github_repository: https://github.com/ychost/ychost.github.io
 #addthis_id: ra-513c6fa83da6ec67
 #分享连接
@@ -28,7 +31,7 @@ github_username:  ychost
 #stackoverflow_link: http://carte-noire.jacobtomlinson.co.uk/
 
 # Footer
-footer_left: "Made with <i class=\"fa fa-heart\"></i> by <a href=\"https://twitter.com/_JacobTomlinson\">Jacob Tomlinson</a>"
+footer_left: "楔子 <i class=\"fa fa-heart\"></i>  <a href=\"http://weibo.com/SuDoY\">八千里路</a>"
 footer_right: "&lt;/&gt; on <a href=\"https://github.com/jacobtomlinson/carte-noire\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
 
 # Build settings

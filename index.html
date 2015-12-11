@@ -9,7 +9,7 @@ layout: default
         <div class="col-md-12 main content-panel">
 
             <div class="gravatar">
-                <img src="{{ site.title_image }}" class="img-circle about-image" height="150" width="150" alt="{{ site.title }}" />
+                <img src="{{ site.title_image }}" class="img-circle about-image" height="165" width="150" alt="{{ site.title }}" />
             </div>
 
             <h1 class="header author-header" itemprop="headline">{{ site.title }}</h1>
@@ -24,7 +24,7 @@ layout: default
 
             <div class="articles">
 
-              <h2>最近更新</h2>
+              <h2>最 近 更 新</h2>
 
               <ul>
                   {% for post in site.posts | limit: site.post_limit %}
@@ -36,7 +36,7 @@ layout: default
 
                   {% endfor %}
                   <li>
-                      <small><i><a href="{{ site.baseurl }}/posts/">more...</a></i></small>
+                      <small><i><a href="{{ site.baseurl }}/posts/">更多...</a></i></small>
                   </li>
               </ul>
 

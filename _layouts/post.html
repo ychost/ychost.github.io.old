@@ -81,17 +81,30 @@ layout: default
       </div>
 
       <div class="content-panel feedback">
-        I <i class="fa fa-heart"></i> feedback.<br />
-       如果你对此文章有更好的想法请 <a href="http://weibo.com/SuDoYc" target="_blank">@我</a> 或者在下面评论!
+         不明<i class="fa fa-heart"></i> 觉厉<br />
+       如果你对此文章有更好的想法请 <a href="http://weibo.com/SuDoYc" target="_blank">@夏天丶x</a> 或者在下面评论!
       </div>
 
-      {% if site.uyan_account  %}
+      {% if site.comment_os == "uyan"  %}
     <!-- UY BEGIN -->
         <div id="uyan_frame"></div>
         <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2075696"></script>
     <!-- UY END -->
       {% endif %}
+     {%if site.comment_os == "changyan" %}
+     <!--打分版，用户可以对当前新闻、游戏或者应用等进行1-5级的评分-->
+      <div id="SOHUCS"></div>
+      <script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+      <script type="text/javascript">
+          window._config = { showScore: true };
+          window.changyan.api.config({
+              appid: 'cys8B776p',
+              conf: 'prod_f5e62400886309bd420b5adfe00275c4'
+          });
+      </script> 
 
+       
+     {% endif %}
       {% if site.related_posts.length > 0 %}
       <div class="content-panel related clearfix">
         {% for post in site.related_posts limit:1 %}

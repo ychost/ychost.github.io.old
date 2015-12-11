@@ -10,7 +10,7 @@ layout: default
     <div id="search-container">
       <input type="text" id="search-input" placeholder="Type here...">
       <div class="col-md-12 content-panel articles">
-        <ul id="results-container"><small>Start typing to see some results</small></ul>
+        <ul id="results-container"><small> 等待输入... </small></ul>
       </div>
     </div>
 
@@ -27,7 +27,7 @@ layout: default
     resultsContainer: document.getElementById('results-container'),
     dataSource: '{{ site.baseurl }}/search.json',
     searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}<\/a><\/li>',
-    noResultsText: 'No results found',
+    noResultsText: '对不起，未搜索到结果',
     limit: 10,
     fuzzy: true,
   })
