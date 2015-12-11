@@ -13,7 +13,7 @@ baidu_analytics: "http://sitecenter.baidu.com/"
 
 #评论系统 畅言 or 友言
 comment_os: changyan
-#commentos:uyan
+#comment_os:uyan
 github_repository: https://github.com/ychost/ychost.github.io
 #addthis_id: ra-513c6fa83da6ec67
 #分享连接
