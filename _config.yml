@@ -1,0 +1,39 @@
+# Site settings
+title: "夏天"
+email: ychost@outlook.com
+description: ""
+baseurl: ""
+url: "http://blog.sudoyc.com/"
+title_description: "当天生的爱好发展成为一个强烈的愿望时，一个人会以惊人的速度向着他的目标大跨步地奔去。——Nikola Tesla"
+title_image: "/avatar/avatar_Tesla.jpg"
+
+baidu_analytics: "http://sitecenter.baidu.com/"
+#评论账户
+#disqus_account: cartenoire
+uyan_account: uyan
+github_repository: https://github.com/ychost/ychost.github.io
+#addthis_id: ra-513c6fa83da6ec67
+#分享连接
+jiaThis: ok
+post_limit: 5
+
+# Social usernames/URLs
+#twitter_username: _jacobtomlinson
+link_weibo: http://weibo.com/SuDoYc
+link_mail: mailto:ychost@outlook.com
+link_qq: tencent://message/?uin=292538649
+github_username:  ychost
+
+
+#stackoverflow_link: http://carte-noire.jacobtomlinson.co.uk/
+
+# Footer
+footer_left: "Made with <i class=\"fa fa-heart\"></i> by <a href=\"https://twitter.com/_JacobTomlinson\">Jacob Tomlinson</a>"
+footer_right: "&lt;/&gt; on <a href=\"https://github.com/jacobtomlinson/carte-noire\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
+
+# Build settings
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
+permalink: pretty
+exclude: [vendor]
