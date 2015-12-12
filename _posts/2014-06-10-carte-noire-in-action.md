@@ -3,7 +3,8 @@ layout:     post
 title:      Carte Noire in Action
 date:       2014-06-10 12:31:19
 summary:    See what the different elements looks like.
-categories: [jekyll, sample]
+categories: 财务处
+reprint:      yes
 thumbnail: cogs
 tags:
  - demo
