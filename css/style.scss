@@ -64,7 +64,9 @@ a:hover {
 ul {
     list-style-type: none;
 }
-
+.my-home{
+	cursor: pointer;
+}
 .navbar, .nav {
 	background-color: $dark-blue;
 

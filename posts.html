@@ -10,6 +10,7 @@ layout: default
     <h2 class="header" itemprop="headline">所有文章</h2>
 
     <!--sort by custome-->
+    <!--
     {% for category in site.categories %}
     <div class="col-md-12 content-panel articles">
     <h2>{{ category | first }}</h2>
@@ -22,11 +23,11 @@ layout: default
     </ul>
     </div>
     {% endfor %}
-
+<-->
 
 
     <!--sort by time-->
-    <!--
+
       {% for post in site.posts %}
       {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
       {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
@@ -54,7 +55,7 @@ layout: default
     {% endif %}
 
     {% endfor %}
-    <-->
+
     </div>
 
   </div>

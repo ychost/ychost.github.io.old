@@ -21,6 +21,10 @@
         $(".menu-button").hide();
         $("#my-menu").trigger("open.mm");
       });
+      //2015-12-12 12:18:56，关闭导航
+      $(".my-home").click(function() {
+        $("#my-menu").trigger("close.mm");
+      });
    });
 </script>
 
@@ -28,7 +32,7 @@
 <script type="text/javascript">
 var hm = document.createElement("script");
   hm.src = "//hm.baidu.com/hm.js?7ad0006693dc5c547b2843f27ea0184b";
-  var s = document.getElementsByTagName("script")[0]; 
+  var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(hm, s);
 </script>
 {% endif %}
