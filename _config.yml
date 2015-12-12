@@ -31,8 +31,8 @@ github_username:  ychost
 #stackoverflow_link: http://carte-noire.jacobtomlinson.co.uk/
 
 # Footer
-footer_left: "楔子 <i class=\"fa fa-heart\"></i>  <a href=\"http://weibo.com/SuDoY\">八千里路</a>"
-footer_right: "&lt;/&gt; on <a href=\"https://github.com/jacobtomlinson/carte-noire\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
+footer_left: "楔子 <i class=\"fa fa-heart\"></i>  <a target=\"_new\" href=\"http://weibo.com/SuDoY\">八千里路</a>"
+footer_right: "&lt;/&gt; on <a target=\"_new \" href=\"https://github.com/ychost\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
 
 # Build settings
 markdown: redcarpet
