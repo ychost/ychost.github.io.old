@@ -26,28 +26,30 @@ layout: default
       <h1 class="header" itemprop="name">{{ page.title }}</h1>
 
       <div class="author">
-        <small><i>
-          {% if page.author %}
-          by
+        <small><i style="font-style:normal;">
+
+          作者：
           <span itemprop="author">
-            {% if site.google_plus_link %}
-              <a rel="author" href="{{ site.google_plus_link }}">
-            {% endif %}
             <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-              <span itemprop="name">{{ page.author }}</span>
+              <span itemprop="name" style="color:#3CA2A2;";><strong>
+                {% if page.author %}
+                    {{ page.author }}
+                {% else %}
+                    未知
+                {% endif %}
+              </strong></span>
             </span>
-            {% if site.google_plus_link %}
-              </a>
-            {% endif %}
           </span>
-          {% endif %}
 
 
-          时间： <span itemprop="datePublished" content="2014-08-28">{{ page.date | date:"%d/%m/%Y" }}</span>
-          {% if page.categories != empty %} --所属分类: {% for category in page.categories limit:1 %}{{ category }}{% endfor %}{% endif %}
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  时间：<span itemprop="datePublished" content="2014-08-28">{{ page.date | date:"%d/%m/%Y" }}</span>
+          <!--{% if page.categories != empty %} --所属分类: {% for category in page.categories limit:1 %}{{ category }}{% endfor %}{% endif %}
+          <-->
         </i>
-        {% if page.reprint %}
-           &nbsp;&nbsp;&nbsp;-------  <span style="color:red">转载请注明出处<span>
+        {% if page.original %}
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------转自 <a target="_new" href="{{ page.original }}" style="color:red;font-style:oblique">@{{page.author}}</a>
+        {% else %}
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red;font-style:oblique">------ 转载请注明出处</span>
         {% endif %}
       </small>
       </div>
@@ -87,8 +89,8 @@ layout: default
       </div>
 
       <div class="content-panel feedback">
-         不明<i class="fa fa-heart"></i> 觉厉<br />
-       如果你对此文章有更好的想法请 <a href="http://weibo.com/SuDoYc" target="_blank">@夏天丶x</a> 或者在下面评论!
+         楔子<i class="fa fa-heart"></i> 八千里路<br />
+       如果你对此文章有更好的想法请 <a href="http://weibo.com/SuDoYc" target="_blank">@夏天丶x</a> 或者直接在下面评论!
       </div>
 
       {% if site.comment_os == "uyan"  %}
