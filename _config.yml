@@ -16,8 +16,8 @@ author_avatar: "/avatar/avatar_sketch.jpg"
 baidu_analytics: "http://sitecenter.baidu.com/"
 #评论账户
 #评论系统 畅言 or 友言
-comment_os : no
-#comment_os: changyan
+#comment_os : no
+comment_os: changyan
 #comment_os:uyan
 github_repository: https://github.com/ychost/ychost.github.io
 #分享连接
