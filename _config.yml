@@ -1,35 +1,33 @@
 # Site settings
 encoding: utf-8
-title: "Tesla"
+#网站标题
+title: "ychost's first blog"
+#头像下面的名字
+author_name: "ychost"
 email: ychost@outlook.com
 description: ""
 baseurl: ""
 url: "http://blog.sudoyc.com/"
 title_description: "当天生的爱好发展成为一个强烈的愿望时，一个人会以惊人的速度向着他的目标大跨步地奔去。——Nikola Tesla"
-title_image: "/avatar/avatar_Tesla.jpg"
-
+#title_image: "/avatar/avatar_Tesla.jpg"
+#头像
+author_avatar: "/avatar/avatar_Tesla.jpg"
+#网页统计工具
 baidu_analytics: "http://sitecenter.baidu.com/"
 #评论账户
-#disqus_account: cartenoire
-
 #评论系统 畅言 or 友言
 comment_os: changyan
 #comment_os:uyan
 github_repository: https://github.com/ychost/ychost.github.io
-#addthis_id: ra-513c6fa83da6ec67
 #分享连接
 jiaThis: ok
 post_limit: 5
-
 # Social usernames/URLs
 #twitter_username: _jacobtomlinson
 link_weibo: http://weibo.com/SuDoYc
 link_mail: mailto:ychost@outlook.com
 link_qq: tencent://message/?uin=292538649
 github_username:  ychost
-
-
-#stackoverflow_link: http://carte-noire.jacobtomlinson.co.uk/
 
 # Footer
 footer_left: "楔子 <i class=\"fa fa-heart\"></i>  <a target=\"_new\" href=\"http://weibo.com/SuDoY\">八千里路</a>"
