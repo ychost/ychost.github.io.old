@@ -11,12 +11,13 @@ url: "http://blog.sudoyc.com/"
 title_description: "当天生的爱好发展成为一个强烈的愿望时，一个人会以惊人的速度向着他的目标大跨步地奔去。——Nikola Tesla"
 #title_image: "/avatar/avatar_Tesla.jpg"
 #头像
-author_avatar: "/avatar/avatar_Tesla.jpg"
+author_avatar: "/avatar/avatar_sketch.jpg"
 #网页统计工具
 baidu_analytics: "http://sitecenter.baidu.com/"
 #评论账户
 #评论系统 畅言 or 友言
-comment_os: changyan
+comment_os : no
+#comment_os: changyan
 #comment_os:uyan
 github_repository: https://github.com/ychost/ychost.github.io
 #分享连接

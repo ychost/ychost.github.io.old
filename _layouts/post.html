@@ -23,15 +23,15 @@ layout: default
       </div>
       {% endif %}
 
-      <h1 class="header" itemprop="name">{{ page.title }}</h1>
+      <h1 class="header" itemprop="name" style="font-family:'chengjishi'">{{ page.title }}</h1>
 
-      <div class="author">
-        <small><i style="font-style:normal;">
+      <div class="author" style="font-size:24px">
+        <span><i style="font-style:normal;">
 
           作者：
           <span itemprop="author">
             <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-              <span itemprop="name" style="color:#3CA2A2;";><strong>
+              <span itemprop="name" class="author-post-name";><strong>
                 {% if page.author %}
                     {{ page.author }}
                 {% else %}
@@ -42,25 +42,25 @@ layout: default
           </span>
 
 
-         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  时间：<span itemprop="datePublished" content="2014-08-28">{{ page.date | date:"%d/%m/%Y" }}</span>
+         &nbsp;  时间：<span itemprop="datePublished" content="2014-08-28">{{ page.date | date:"%d/%m/%Y" }}</span>
           <!--{% if page.categories != empty %} --所属分类: {% for category in page.categories limit:1 %}{{ category }}{% endfor %}{% endif %}
           <-->
         </i>
         {% if page.original %}
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------转自 <a target="_new" href="{{ page.original }}" style="color:red;font-style:oblique">@{{page.author}}</a>
+            &nbsp;-----转自 <a target="_new" href="{{ page.original }}" style="color:red;font-style:oblique">@{{page.author}}</a>
         {% else %}
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red;font-style:oblique">------ 转载请注明出处</span>
+           &nbsp;<span style="font-style:oblique">------ 转载请注明出处</span>
         {% endif %}
-      </small>
+      </span>
       </div>
 
       <div class="read-time">
-        <small>
+        <span>
           {{ minutes }} 分钟前 阅读过
-        </small>
+        </span>
       </div>
 
-      <div class="content-panel content">
+      <div class="content-panel content" style="font-family:normal">
         <span itemprop="articleBody">{{ content }}</span>
 
        {%if site.jiaThis == "ok"%}
@@ -99,7 +99,7 @@ layout: default
         <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2075696"></script>
     <!-- UY END -->
 
-     {% else if site.comment_os == "changyan" %}
+     {% elsif site.comment_os == "changyan" %}
      <!--打分版，用户可以对当前新闻、游戏或者应用等进行1-5级的评分-->
       <div id="SOHUCS"></div>
       <script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>

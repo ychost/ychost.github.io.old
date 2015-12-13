@@ -3,9 +3,17 @@
 // @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700);
 // @import url(http://fonts.googleapis.com/css?family=Montserrat);
 // @import url(http://fonts.googleapis.com/css?family=Anonymous+Pro:400,700);
-@import url(./googleapis.com/Sans.css);
-@import url(./googleapis.com/Montserrat.css);
-@import url(./googleapis.com/Anonymous.css);
+//@import url(./googleapis.com/Sans.css);
+//@import url(./googleapis.com/Montserrat.css);
+//@import url(./googleapis.com/Anonymous.css);
+@font-face {
+    font-family: 'SmileFont';
+    src: url('../font/weknow_smile-at-face/Smile at Face.ttf');
+}
+@font-face{
+	font-family: 'chengjishi';
+	src:url('../font/xingshu/chengjishi.ttf');
+}
 /* Colours */
 $twitter:        #6dabda;
 $linkedin:       #2b77b1;
@@ -42,11 +50,12 @@ html {
 }
 
 body {
-	font-family: 'Open Sans', sans-serif;
+//	font-family: 'Open Sans', sans-serif;
+	font-family: 'chengjishi',sans-serif;
 	font-weight: 300;
 	background-color: $dark;
 	color: $white;
-	font-size: 16px;
+	font-size: 25px;
 	height: 100%;
 	width: 100%
 }
@@ -66,6 +75,11 @@ ul {
 }
 .my-home{
 	cursor: pointer;
+	font-family: 'SmileFont';
+}
+.author-post-name{
+	color:#3CA2A2;
+	font-family:'chengjishi';
 }
 .navbar, .nav {
 	background-color: $dark-blue;
@@ -97,7 +111,8 @@ ul {
 }
 
 .header {
-	font-size: 32px;
+
+	font-size: 34px;
 	text-align: center;
 	margin-top: 20px;
 	margin-left: -0%;
@@ -112,7 +127,7 @@ ul {
 
 .menu-button {
 	color: $white;
-	font-size: 24px;
+	font-size: 28px;
 	position: fixed;
 	top: 10px;
 	left: 20px;
@@ -153,7 +168,7 @@ ul {
 	}
 
 	.pages {
-
+		font-size: 24px;
 		.fa {
 			margin-right: 10px;
 		}
@@ -222,9 +237,8 @@ ul {
 		margin-top: 10px;
 		margin-left: 0%;
 		margin-bottom: 0px;
-		font-size: 32px;
+		font-size: 28px;
 		width: 100%;
-
 		@media (min-width: $screen-lg-min) {
 			margin-left: -10%;
 			width: 120%;
@@ -236,11 +250,11 @@ ul {
 	}
 
 	.author-header {
-		font-family: 'Montserrat', sans-serif;
+		font-family: 'SmileFont';
 		color: $light-blue;
 		margin-top: 0px;
 		padding-top: 15px;
-		font-size: 30px;
+		font-size: 25px;
 
 		@media (min-width: $screen-sm-min) {
 			font-size: 52px;
@@ -277,7 +291,7 @@ ul {
 	}
 
 	.links {
-		font-size: 2em;
+		font-size: 1.2em;
 	}
 
 	.articles {
@@ -303,7 +317,7 @@ ul {
 				}
 
 				small {
-					font-size: 14px;
+					font-size: 20px;
 					margin-top: -10px;
 					padding-top: 0px;
 					color: $light-medium;
@@ -529,7 +543,7 @@ ul {
 		}
 
 		.read-time {
-			font-size: 16px;
+			font-size: 20px;
 			text-align: center;
 			margin-bottom: 10px;
 			font-weight: 400;
@@ -661,6 +675,7 @@ ul {
 			}
 
 			.tags {
+				font-family: 'chengjishi';
 				margin-top: 10px;
 				margin-bottom: 10px;
 				text-align: center;
