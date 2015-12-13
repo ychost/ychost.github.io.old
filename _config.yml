@@ -1,4 +1,5 @@
 # Site settings
+encoding: utf-8
 title: "Tesla"
 email: ychost@outlook.com
 description: ""
@@ -38,7 +39,10 @@ footer_right: "&lt;/&gt; on <a target=\"_new \" href=\"https://github.com/ychost
 markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
-#permalink: pretty
+permalink: pretty
 #category支持中文，让日期命名文件夹
-permalink: /:year/:month/:day/:title
+#在github上面这样做有bug,导致搜索，文章链接不可用,但不这样做本地又无法预览中文命名的_post
+#最后修改了jekyll的系统配置文件，使得其本地支持中文命名的_post
+#permalink: /:year/:month/:day/:title
+
 exclude: [vendor]
