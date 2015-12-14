@@ -152,7 +152,7 @@ try {
 
         addFont(localStorage.chenjishi);
     } else {
-      alert("no");
+
         // 首次加载字体我们需要异步加载它
         $.get("/font/xingshu/chenjishi.css", function(result){
            localStorage.chenjishi = result;
@@ -160,6 +160,7 @@ try {
       });
     }
   }catch(err){
+      alert("请在电脑上用谷歌或者火狐浏览器吧，你这浏览器加载出来的不能忍");
    }
  }
  function addFont(cssString) {
