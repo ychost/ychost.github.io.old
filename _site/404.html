@@ -168,13 +168,14 @@ try {
     if (localStorage.chenjishi) {
         // 如果localStorage中有该字体，就直接取出来加载
 
-        addFont(localStorage.chenjishi);
+        addFont(localStorage.getItem("chenjishi"));
     } else {
 
         // 首次加载字体我们需要异步加载它
         $.get("/font/xingshu/chenjishi.css", function(result){
-           localStorage.chenjishi = result;
-           addFont(localStorage.chenjishi);
+          // localStorage.chenjishi = result;
+          localStorage.setItem('chenjishi', result);
+           addFont(result);
       });
     }
   }catch(err){
