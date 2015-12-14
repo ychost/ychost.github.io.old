@@ -11,22 +11,33 @@
 <script src="{{ site.baseurl }}/js/bootstrap.mini.js"></script>
 <script src="{{ site.baseurl }}/js/jquery.mmenu.min.all.js"></script>
 <script src="{{ site.baseurl }}/js/highlight.pack.js"></script>
-<!--中文字体陈继世字体支持-->
-<script type="text/javascript" src="http://www.youziku.com/webfont/FastJS/b828ec02475b4861823065822134a905.js"></script>
-<script  type="text/javascript">
-$youziku.load("#main_body", "b828ec02475b4861823065822134a905", "cjsyingbixingshu");
-$youziku.load(".pages", "b828ec02475b4861823065822134a905", "cjsyingbixingshu");
-$youziku.load(".header", "b828ec02475b4861823065822134a905", "cjsyingbixingshu");
-$youziku.load(".feedback", "b828ec02475b4861823065822134a905", "cjsyingbixingshu");
-$youziku.load(".author", "b828ec02475b4861823065822134a905", "cjsyingbixingshu");
-
-
-/*[．．．]*/
-$youziku.draw();
 </script>
 <script>hljs.initHighlightingOnLoad();</script>
 <script type="text/javascript">
    $(document).ready(function() {
+     function addFont() {
+         var style = document.createElement('style');
+         style.rel = 'stylesheet';
+         document.head.appendChild(style);
+         style.textContent = localStorage.chenjishi;
+     }
+
+     try {
+         if (localStorage.chenjishi) {
+             // 如果localStorage中有该字体，就直接取出来加载
+             addFont();
+         } else {
+             // 首次加载字体我们需要异步加载它
+             $.get("{{ site.baseurl }}/font/xingshu/chenjishi.css", function(result){
+                localStorage.chenjishi = result;
+                addFont();
+           });
+         }
+       }catch(err){
+
+        }
+
+        
       $("#my-menu").mmenu().on( "closed.mm", function() {
             $(".menu-button").show();
          });
@@ -49,3 +60,14 @@ var hm = document.createElement("script");
   s.parentNode.insertBefore(hm, s);
 </script>
 {% endif %}
+<!--中文字体陈继世字体支持By youziku>
+<script type="text/javascript" src="http://www.youziku.com/webfont/FastJS/203b684a40f440c8b1a718c60baf31b8.js"></script>
+<script  type="text/javascript"->
+
+$youziku.load("#main_body", "203b684a40f440c8b1a718c60baf31b8", "AnJingCheng-Xing");
+$youziku.draw();
+</script-->
+<!--load my local chenjishi Fnont by base64 use html5 localstorge-->
+<script type="text/javascript">
+
+</script>

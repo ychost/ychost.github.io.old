@@ -1,15 +1,9 @@
 ---
 ---
-// @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700);
-// @import url(http://fonts.googleapis.com/css?family=Montserrat);
-// @import url(http://fonts.googleapis.com/css?family=Anonymous+Pro:400,700);
-//@import url(./googleapis.com/Sans.css);
-//@import url(./googleapis.com/Montserrat.css);
-//@import url(./googleapis.com/Anonymous.css);
-@font-face {
-    font-family: 'SmileFont';
-    src: url('../font/weknow_smile-at-face/Smile at Face.ttf');
-}
+// @font-face {
+//     font-family: 'hcn-xllnfregular';
+//     src: url('../font/weknow_smile-at-face/Smile at Face.ttf');
+// }
 
 /* Colours */
 $twitter:        #6dabda;
@@ -47,7 +41,7 @@ html {
 }
 
 body {
-
+  font-family: 'hcn-xllnfregular';
 	font-weight: 300;
 	background-color: $dark;
 	color: $white;
@@ -71,7 +65,7 @@ ul {
 }
 .my-home{
 	cursor: pointer;
-	font-family: 'SmileFont';
+	//font-family: 'SmileFont';
 }
 .author-post-name{
 	color:#3CA2A2;
@@ -245,7 +239,7 @@ ul {
 	}
 
 	.author-header {
-		font-family: 'SmileFont';
+	//	font-family: 'SmileFont';
 		color: $light-blue;
 		margin-top: 0px;
 		padding-top: 15px;
@@ -429,7 +423,9 @@ ul {
 	}
 }
 
-
+h1{
+  font-weight: bold;
+}
 .single {
 	height:100%;
 	max-height: 100%;
@@ -598,7 +594,6 @@ ul {
 				}
 
 				:before {
-    			font-family: "Times New Roman";
 					color: $light-medium;
 			    content: "“";
 			    position: absolute;
