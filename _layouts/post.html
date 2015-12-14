@@ -2,12 +2,7 @@
 layout: default
 ---
 
-{% if page.minutes %}
-  {% assign minutes = page.minutes %}
-{% else %}
-  {% assign minutes = content | number_of_words | divided_by: 180 %}
-  {% if minutes == 0 %}{% assign minutes = 1 %}{% endif %}
-{% endif %}
+
 
 <div class="container-fluid single">
   <div class="row">
@@ -43,8 +38,6 @@ layout: default
 
 
          &nbsp;  时间：<span itemprop="datePublished" content="2014-08-28">{{ page.date | date:"%d/%m/%Y" }}</span>
-          <!--{% if page.categories != empty %} --所属分类: {% for category in page.categories limit:1 %}{{ category }}{% endfor %}{% endif %}
-          <-->
         </i>
         {% if page.original %}
             &nbsp;-----转自 <a target="_new" href="{{ page.original }}" style="color:red;font-style:oblique">@{{page.author}}</a>
@@ -52,12 +45,6 @@ layout: default
            &nbsp;<span style="font-style:oblique">------ 转载请注明出处</span>
         {% endif %}
       </span>
-      </div>
-
-      <div class="read-time">
-        <span>
-          {{ minutes }} 分钟前 阅读过
-        </span>
       </div>
 
       <div class="content-panel content" style="font-family:normal">

@@ -262,6 +262,7 @@ ul {
 		margin-top: 60px;
 		margin-left: 0px;
 		margin-right: 0px;
+		    box-sizing: border-box;
 	}
 
 	.gravatar {
@@ -407,6 +408,9 @@ ul {
 		border-radius:15px;
 		-moz-border-radius:15px;
 		-webkit-border-radius:15px;
+		height:50px;
+		font-size:28px;
+		font-family:'hcn-xllnfregular'
 	}
 
 	#search-input:focus {
