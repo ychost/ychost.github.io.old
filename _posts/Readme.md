@@ -17,26 +17,26 @@ original|出处地址 `http://...`|如果为空则表示原创
 <br/>
   * `layout:     post `
 
-<br/>  * `title:      c++ Primer 学习笔记 `
+<br/>  * `title:      `
 
-<br/> * `date:       2015-12-11 12:32:18 `
+<br/> * `date:       2015-12-14 `
 
-<br/> * ` summary:    个人的C++学习笔记 `
+<br/> * ` summary:    等待更新 `
 
-<br/>  * `categories: 学习笔记 `
+<br/>  * `categories: 等待更新 `
 
-<br/>  *  `thumbnail: cogs `
+<br/>  *  `thumbnail: lock `
 
-<br/> * ` author  :  夏天 `
+<br/> * ` author  :  ychost `
 
-<br/> * ` orginal  : no or http://,,,`
+<br/> * ` orginal  : no`
 
 
 <br/>  *  ` tags: `
 
-<br/>   &nbsp;&nbsp;&nbsp;&nbsp; *  `- about`
+<br/>   &nbsp;&nbsp;&nbsp;*  `- 作者太懒`
 
-<br/>    &nbsp;&nbsp;&nbsp;&nbsp;`- jekyll`
+<br/>    &nbsp;&nbsp;&nbsp;&nbsp;`- 等待更新`
 
 <br/>`---`
 </div>

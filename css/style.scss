@@ -33,6 +33,7 @@ $screen-sm-min: 768px;
 $screen-md-min: 992px;
 $screen-lg-min: 1200px;
 
+
 /* Globals */
 
 html {
@@ -53,6 +54,7 @@ body {
 a, a:active {
 	color: $light-blue;
 	text-decoration: none;
+	font-size:28px;
 }
 
 a:hover {
@@ -65,7 +67,6 @@ ul {
 }
 .my-home{
 	cursor: pointer;
-	//font-family: 'SmileFont';
 }
 .author-post-name{
 	color:#3CA2A2;
@@ -558,7 +559,7 @@ h1{
 				font-size: 24px;
 				padding-left: 30px;
 				padding-right: 30px;
-				padding-top: 40px;
+			//	padding-top: 40px;
 				padding-bottom: 20px;
 			}
 
@@ -666,6 +667,7 @@ h1{
 			}
 
 			.tags {
+				font-family:"hcn-xllnfregular";
 				margin-top: 10px;
 				margin-bottom: 10px;
 				text-align: center;
@@ -823,4 +825,16 @@ h1{
 		margin-top: 20px;
 		margin-bottom: 20px;
 	}
+}
+
+
+/*Article setting*/
+.content {
+
+  h1{	font-size: 24px;}
+  h2{	font-size: 17px;}
+  h3{	font-size: 14px;}
+  h4{	font-size: 12px;}
+  h5{	font-size: 11px;}
+  li{	font-size: 13px;}
 }

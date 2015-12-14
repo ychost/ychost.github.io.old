@@ -17,7 +17,8 @@ body {
 
 a, a:active {
   color: #3CA2A2;
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: 28px; }
 
 a:hover {
   color: #215A6D;
@@ -353,7 +354,6 @@ h1 {
           font-size: 24px;
           padding-left: 30px;
           padding-right: 30px;
-          padding-top: 40px;
           padding-bottom: 20px; } }
       .single .article .content img {
         max-width: 100%;
@@ -431,6 +431,7 @@ h1 {
         padding: 0.5em;
         vertical-align: middle; }
       .single .article .content .tags {
+        font-family: "hcn-xllnfregular";
         margin-top: 10px;
         margin-bottom: 10px;
         text-align: center; }
@@ -523,3 +524,17 @@ h1 {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px; }
+
+/*Article setting*/
+.content h1 {
+  font-size: 24px; }
+.content h2 {
+  font-size: 17px; }
+.content h3 {
+  font-size: 14px; }
+.content h4 {
+  font-size: 12px; }
+.content h5 {
+  font-size: 11px; }
+.content li {
+  font-size: 13px; }

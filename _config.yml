@@ -13,11 +13,11 @@ title_description: "当天生的爱好发展成为一个强烈的愿望时，一
 #头像
 author_avatar: "/avatar/avatar_sketch.jpg"
 #网页统计工具
-#baidu_analytics: "http://sitecenter.baidu.com/"
+baidu_analytics: "http://sitecenter.baidu.com/"
 #评论账户
 #评论系统 畅言 or 友言
 comment_os : no
-#comment_os: changyan
+comment_os: changyan
 #comment_os:uyan
 github_repository: https://github.com/ychost/ychost.github.io
 #分享连接
@@ -31,7 +31,7 @@ link_qq: tencent://message/?uin=292538649
 github_username:  ychost
 
 # Footer
-footer_left: "楔子 <i class=\"fa fa-heart\"></i>  <a target=\"_new\" href=\"http://weibo.com/SuDoY\">八千里路</a>"
+footer_left: "楔子 <i class=\"fa fa-heart\"></i>  <a target=\"_new\" href=\"http://weibo.com/SuDoYc\">八千里路</a>"
 footer_right: "&lt;/&gt; on <a target=\"_new \" href=\"https://github.com/ychost\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
 
 # Build settings
