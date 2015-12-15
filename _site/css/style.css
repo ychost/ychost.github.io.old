@@ -95,10 +95,10 @@ ul {
   color: #FFFFFF; }
 #my-menu a:hover {
   color: #3CA2A2; }
-#my-menu .pages {
+#my-menu .pages .fa {
+  margin-right: 20px; }
+#my-menu .pages a {
   font-size: 24px; }
-  #my-menu .pages .fa {
-    margin-right: 10px; }
 
 .links {
   margin-top: 50px;

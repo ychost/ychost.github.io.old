@@ -1,6 +1,6 @@
 ---
 layout: post
-title: web字体加载问题
+title: Sublime Text2 注册码一枚
 date: 2015-12-14
 summary: 等待更新
 categories: 等待更新

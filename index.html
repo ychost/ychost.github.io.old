@@ -50,11 +50,11 @@ layout: default
 
     <span class="header" itemprop="headline"><h1 style="font-size:50px;">全部文章</h1></span>
     <!--sort by custome-->
-    {% for category in site.categories %}
+    {% for category in site.categories  %}
     <div class="col-md-12 content-panel articles">
-    <h2><span style="font-size:35px">{{ category | first }}</span></h2>
+    <h2><span style="font-size:35px">{{ category | first }}({{category | last | size}})</span></h2>
     <ul >
-        {% for post in category.last %}
+        {% for post in category.last |limit: site.post_limit_categories %}
             <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
               <br />
               <small> <i class="fa fa-tags"></i></small>
@@ -65,8 +65,12 @@ layout: default
               {% endfor %}
             </li>
         {% endfor %}
+        <li>
+            <span><i><a href='{{ site.baseurl }}/category?cat={{ category | first }}'>更多...</a></i></span>
+        </li>
     </ul>
     </div>
+
     {% endfor %}
   </div>
 </div>

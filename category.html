@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<script type="text/javascript">
+$(document).ready(function(){
+  //拆分url得到“=”号后面的值（先用split("?")[1]得到？号以后的值，再用split("=")[1]得到等号后面的值，split从0开始计数）
+      var  dataStr = '{ {% for cat in site.categories %}{% if cat[0] != site.categories.first[0] %},{% endif %}"{{ cat[0] }}":[{% for post in cat[1] %}{% if post != cat[1].first %},{% endif %}{"url":"{{post.url}}", "title":"{{post.title}}", "date":"{{post.date | date:"%d/%m/%Y"}}"}{% endfor %}]{% endfor %} }',
+      data = JSON.parse(dataStr);
+           category = $.query.get("cat");
+      var  article = data[category];
+      for(var i = 0;i<article.length;i++){
+          var  title = article[i]["title"];
+          var  date  = article[i]["date"];
+          var  url   = article[i]["url"];
+          addList(title,url,date)
+      }
+      function addList(title,url,date){
+        var ul = $("#article_list_ul");
+        var li = $("<li></li>");
+        var a  = $("<a>"+title+"</a>");
+            a.attr("href",url);
+        var small = $("<small>"+date+"</small>");
+            a.appendTo(li);
+            small.appendTo(li);
+            li.appendTo(ul);
+      }
+      var author_name = $("#row");
+      var h2 = $('<h2 style="font-size:40px">'+category+'</h2>');
+          h2.addClass("header");
+          h2.appendTo(author_name);
+    })
+  </script>
+
+<div class="container-fluid index">
+  <div class="row index all-posts" >
+
+    <span id="row"><h1 class="header author-header" >{{ site.author_name }}</h1></span>
+
+      <div class="col-md-12 content-panel articles" id="article_list_div">
+          <ul id="article_list_ul"></ul>
+      </div>
+    </div>
+  </div>

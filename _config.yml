@@ -13,16 +13,17 @@ title_description: "当天生的爱好发展成为一个强烈的愿望时，一
 #头像
 author_avatar: "/avatar/avatar_sketch.jpg"
 #网页统计工具
-baidu_analytics: "http://sitecenter.baidu.com/"
+#baidu_analytics: "http://sitecenter.baidu.com/"
 #评论账户
 #评论系统 畅言 or 友言
 comment_os : no
-comment_os: changyan
+#comment_os: changyan
 #comment_os:uyan
 github_repository: https://github.com/ychost/ychost.github.io
 #分享连接
-jiaThis: ok
+#jiaThis: ok
 post_limit: 5
+post_limit_categories: 4
 # Social usernames/URLs
 #twitter_username: _jacobtomlinson
 link_weibo: http://weibo.com/SuDoYc
