@@ -75,3 +75,83 @@ layout: default
   </div>
 </div>
 </div>
+<script type="text/javascript">
+
+  $(function(){
+
+  //MSIE 为IE11以下的检测，Trident.*rv[ :]*11\.为IE
+    if( /Android|webOS|iPhone|iPad|iPod|MSIE |Trident.*rv[ :]*11\.|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+              addOrginalFont();
+     }else{
+               addLsFont();
+     }
+
+      $("#my-menu").mmenu().on( "closed.mm", function() {
+            $(".menu-button").show();
+         });
+      $(".menu-button").click(function() {
+        $(".menu-button").hide();
+        $("#my-menu").trigger("open.mm");
+      });
+      //2015-12-12 12:18:56，关闭导航
+      $(".my-home").click(function() {
+        $("#my-menu").trigger("close.mm");
+      });
+   });
+</script>
+
+{% if site.baidu_analytics %}
+<script type="text/javascript">
+var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?7ad0006693dc5c547b2843f27ea0184b";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+</script>
+{% endif %}
+
+<script type="text/javascript">
+
+function addLsFont(){
+try {
+    if (localStorage.chenjishi) {
+        // 如果localStorage中有该字体，就直接取出来加载
+        addFont(localStorage.getItem("chenjishi"));
+    } else {
+
+        // 首次加载字体我们需要异步加载它
+        $.get("{{ site.baseurl }}/font/xingshu/chenjishi.css", function(result){
+          // localStorage.chenjishi = result;
+          localStorage.setItem('chenjishi', result);
+           addFont(result);
+      });
+    }
+  }catch(err){
+      alert("请在电脑上用谷歌或者火狐浏览器吧，你这浏览器加载出来的不能忍");
+   }
+ }
+ function addFont(cssString) {
+   var doc=document;
+       var style=doc.createElement("style");
+       style.setAttribute("type", "text/css");
+
+       if(style.styleSheet){// IE
+           style.styleSheet.cssText = cssString;
+       } else {// w3c
+           var cssText = doc.createTextNode(cssString);
+           style.appendChild(cssText);
+       }
+       var heads = doc.getElementsByTagName("head");
+       if(heads.length)
+           heads[0].appendChild(style);
+       else
+           doc.documentElement.appendChild(style);
+ }
+
+
+function addOrginalFont(){
+  $.get("{{ site.baseurl }}/font/xingshu/OrginalTTF.css", function(result){
+     addFont(result);
+});
+}
+
+</script>
