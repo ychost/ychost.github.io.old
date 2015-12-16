@@ -1,34 +1,45 @@
 # Site settings
 encoding: utf-8
-#网站标题
+#the web title
 title: "ychost's first blog"
-#头像下面的名字
+#host name
 author_name: "ychost"
 email: ychost@outlook.com
 description: ""
 baseurl: ""
 url: "http://blog.sudoyc.com/"
 title_description: "当天生的爱好发展成为一个强烈的愿望时，一个人会以惊人的速度向着他的目标大跨步地奔去。——Nikola Tesla"
+#home avatar
 #title_image: "/avatar/avatar_Tesla.jpg"
-#头像
 author_avatar: "/avatar/avatar_sketch.jpg"
-#网页统计工具
+
+#web_analytics tools
 baidu_analytics: "http://sitecenter.baidu.com/"
-#评论账户
-#评论系统 畅言 or 友言
-#comment_os : no
+
+##markdown theme
+#soruce: https://github.com/rhiokim/markdown-css
+#param: clearness-dark | solarized-dark | node-dark | metro-vibes-dark
+md_theme: node-dark
+
+##comment system
+#param: changyan | uyan | no
 comment_os: changyan
-#comment_os:uyan
+
 github_repository: https://github.com/ychost/ychost.github.io
-#分享连接
+##share links
+#param ok | no
 #jiaThis: ok
+
+#limit the number of posts that sorted by time
 post_limit: 5
+#limit the number of posts that sorted by categories
 post_limit_categories: 4
 # Social usernames/URLs
-#twitter_username: _jacobtomlinson
 link_weibo: http://weibo.com/SuDoYc
 link_mail: mailto:ychost@outlook.com
 link_qq: tencent://message/?uin=292538649
+
+#github info
 github_username:  ychost
 
 # Footer
@@ -39,10 +50,8 @@ footer_right: "&lt;/&gt; on <a target=\"_new \" href=\"https://github.com/ychost
 markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
+
+#set the build _posts's path
 permalink: pretty
-#category支持中文，让日期命名文件夹
-#在github上面这样做有bug,导致搜索，文章链接不可用,但不这样做本地又无法预览中文命名的_post
-#最后修改了jekyll的系统配置文件，使得其本地支持中文命名的_post
-#permalink: /:year/:month/:day/:title
 
 exclude: [vendor]

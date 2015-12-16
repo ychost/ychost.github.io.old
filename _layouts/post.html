@@ -2,7 +2,10 @@
 layout: default
 ---
 
-
+<head>
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/markdown-themes/markdown.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/markdown-themes/{{ site.md_theme }}.css">
+</head>
 
 <div class="container-fluid single">
   <div class="row">
@@ -46,7 +49,7 @@ layout: default
       </span>
       </div>
 
-      <div class="content-panel content" style="font-family:normal">
+      <div class="markdown  {{ site.md_theme }} " >
         <span itemprop="articleBody">{{ content }}</span>
 
        {%if site.jiaThis == "ok"%}
@@ -59,7 +62,7 @@ layout: default
             <a class="jiathis_button_renren"></a>
             <!--a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a-->
             <!--a class="jiathis_counter_style"></a-->
-          </div>
+      </div>
          <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
         {% endif %}
 

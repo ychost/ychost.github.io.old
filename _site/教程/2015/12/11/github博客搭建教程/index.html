@@ -72,7 +72,12 @@
 
     <div class="page-content">
       <div class="wrap">
-      <div class="container-fluid single">
+      <head>
+  <link rel="stylesheet" href="/css/markdown-themes/markdown.css">
+  <link rel="stylesheet" href="/css/markdown-themes/node-dark.css">
+</head>
+
+<div class="container-fluid single">
   <div class="row">
 
 <div itemscope itemtype="http://schema.org/Article" class="col-md-12 article">      
@@ -106,12 +111,12 @@
       </span>
       </div>
 
-      <div class="content-panel content" style="font-family:normal">
-        <span itemprop="articleBody"><p><center>==============简明教程=================</center></p>
+      <div class="markdown  node-dark " >
+        <span itemprop="articleBody"><p><center><h1>简明教程</h1></center></p>
 
 <hr>
 
-<h1>搭建UserName.github.io为域名的博客</h1>
+<h3>搭建UserName.github.io为域名的博客</h3>
 
 <ul>
 <li>第一步，创建一个名字为userName.github.io的公共仓库</li>
@@ -119,7 +124,7 @@
 <li>至此就能访问UserName.github.io的blog的。</li>
 </ul>
 
-<h1>绑定自己的blog.example.com的域名</h1>
+<h3>绑定自己的blog.example.com的域名</h3>
 
 <ul>
 <li>第一步，去阿里云购买一个域名，并且以CNAME(别名)的方式绑定到userName.github.io</li>
@@ -127,7 +132,7 @@
 ：blog.example.com至此就能访问blog.example.com</li>
 </ul>
 
-<h1>搭建userName.github.io/repo为域名的博客</h1>
+<h3>搭建userName.github.io/repo为域名的博客</h3>
 
 <ul>
 <li>第一步，创建一个为repo(自己随意命名)的公共仓库</li>
@@ -135,15 +140,156 @@
 <li>至此就能访问userName.github.io/repo的blog了</li>
 </ul>
 
-<h1>让blog.example.com/repo指向该blog</h1>
+<h3>让blog.example.com/repo指向该blog</h3>
 
 <ul>
-<li>同上，添加一个CNAME的文件指向blog.example.com就行了</li>
+<li>同上，添加一个CNAME的文件指向blog.example.com就行了**</li>
 </ul>
 
 <hr>
 
-<p><center>==============图文教程==============<center></p>
+<p><center><h1>图文教程</h1></center></p>
+
+<hr>
+
+<p><strong><h4>一、注册github 并且安装好git软件<br />
+二、登录github添加一个远程仓库</h4></strong>
+<img src="/asset/iamges/2015-12-16-1.png" alt="">
+ <h5>添加一个Username.github.io的公共仓库 注Username 为你的github账号</h5>
+ <img src="/asset/iamges/2015-12-16-2.png" alt=""></p>
+
+<hr>
+
+<p><strong><h4>三、本地搭建jekyll-----(环境搭建)<br /></strong></p>
+
+<h2><h5>1.下载<a href="http://rubyinstaller.org/downloads/">ruby</a>和<a href="http://rubyinstaller.org/downloads/">devkit</a></h5></h2>
+
+<p><img src="/asset/iamges/2015-12-16-3.png" alt=""></p>
+
+<ul>
+<li><img src="/asset/iamges/2015-12-16-4.png" alt=""></li>
+</ul>
+
+<h5>2.安装ruby和devikit</h5>
+
+<ul>
+<li><p>Ruby安装傻瓜式的，注意自己的安装路径，然后最好配置下这个路径下面的./bin为PATH的环境变量，这样随时随地就能调用ruby了。</p></li>
+<li><p><img src="/asset/iamges/2015-12-16-5.png" alt=""></p></li>
+<li><p><img src="/asset/iamges/2015-12-16-6.png" alt=""><br>
+安装devikit</p></li>
+<li><p><img src="/asset/iamges/2015-12-16-7.png" alt=""><br/ >
+到该解压文件中执行cmd命令<br/ ></p></li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">  <span class="n">ruby</span> <span class="n">dk</span><span class="p">.</span><span class="nf">rb</span> <span class="n">init</span></code></pre></figure>
+
+<p><img src="/asset/iamges/2015-12-16-8.png" alt="">
+- 检查 ./config.yml</p>
+
+<ul>
+<li><p><img src="/asset/iamges/2015-12-16-9.png" alt=""></p></li>
+<li><p><span style="color:red;font-weight:bold">如果没有指定的路径，则添加上自己的路径！！！！</span>
+执行命令
+<code>
+ruby dk.rb .install
+</code>
+<img src="/asset/iamges/2015-12-16-10.png" alt=""></p></li>
+</ul>
+
+<h6>至此完成devikit的安装。</h6>
+
+<h5>3.安装gem(<a href="mailto:git@github.com">git@github.com</a>:rubygems/rubygems.git)由于该软件官网网速很烂，故用git clone下来</h5>
+
+<ul>
+<li><img src="/asset/iamges/2015-12-16-11.png" alt=""></li>
+<li><p><span style="font-weight:bold">设置gem到path环境变量，注意用自己的./bin路径</span><br />
+<img src="/asset/iamges/2015-12-16-12.png" alt=""><br /></p></li>
+<li><p>测试gem的环境变量和ruby的环境变量是否设置成功
+<img src="/asset/iamges/2015-12-16-13.png" alt=""></p></li>
+<li><p>gem的官方源网速很差，替换为淘宝的源</p></li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-gem" data-lang="gem">    gem sources --add https://ruby.taobao.org/
+  gem sources --remove https://rubygems.org/
+  gem srouces -l</code></pre></figure>
+
+<h5>4.gem安装jekyll</h5>
+
+<ul>
+<li>gem  命令</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-gem" data-lang="gem">  gem install jekyll</code></pre></figure>
+
+<p><img src="/asset/iamges/2015-12-16-14.png" alt="">
+<img src="/asset/iamges/2015-12-16-15.png" alt=""></p>
+
+<h4>四、本地调试jekyll</h4>
+
+<h5>1.到<a href="http://jekyllthemes.org/">jekyllThemes</a>上下载一个自认为不错的模板</h5>
+
+<ul>
+<li><img src="/asset/iamges/2015-12-16-16.png" alt=""></li>
+</ul>
+
+<h5>2.解压该模板，执行命令</h5>
+
+<ul>
+<li>
+<figure class="highlight"><pre><code class="language-jekyll" data-lang="jekyll">jekyll serve</code></pre></figure>
+<br/></li>
+<li><p><span style="color:red;font-weight:bold">根据相关提示用gem install 安装指定的依赖!!!<br />注意查看README.MD文件</span></p></li>
+<li><p><img src="/asset/iamges/2015-12-16-17.png" alt=""></p></li>
+<li><p>打开浏览器访问该网址即可</p></li>
+<li><p><img src="/asset/iamges/2015-12-16-18.png" alt=""></p></li>
+</ul>
+
+<h4>五、push到github上去 到工程文件夹下面git bash here</h4>
+
+<ul>
+<li>git 命令</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">  $git init
+$git add .
+$git commit –m ‘first blood’
+$git remote add blog https://github.com/userNmae/userName.github.io.git
+$git push blog master</code></pre></figure>
+
+<p><img src="/asset/iamges/2015-12-16-19.png" alt=""></p>
+
+<p><img src="/asset/iamges/2015-12-16-20.png" alt=""></p>
+
+<h4>附录</h4>
+
+<ul>
+<li>相关插件</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">gem install kramdown // markdown语言解析包
+gem install pygments.rb // 代码高亮包
+gem install liquid // 编译生成的语言</code></pre></figure>
+
+<ul>
+<li><p><a href="http://jekyllbootstrap.com/usage/jekyll-quick-start.html">Jekyll-bootstrap</a> 教程</p></li>
+<li><p>主题安装、切换</p></li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-git" data-lang="git">$ rake theme:install
+ git=https://github.com/jekyllbootstrap/theme-the-program.git
+$ rake theme:switch name="the-program"</code></pre></figure>
+
+<ul>
+<li>相关文件夹说明
+&gt;1.文件夹<em>layouts：用于存放模板的文件夹，<br/>
+2.文件夹<em>posts：用于存放博客文章的文件夹<br/>
+3.文件夹css：存放博客所用css的文件夹,比如主题文件以及高亮文件都是放在此处的<br/>
+4..gitignore：可以删掉，后面会将项目添加到git项目，所以这个不需要了<br/>
+5.</em>coinfig.yml：jekyll的配置文件，里面可以定义相当多的配置参数，具体配置参数可以参照其官网<br/>
+6.index.html：项目的首页<br/>
+7.</em>includes:用于存放一些固定的HTML代码段，文件为.html格式，可以在模板中通过liquid标签引入，常用来在各个模板中复用如 导航条、标签栏、侧边栏之类的在每个页面上都一样不变的内容，需要注意的是，这个代码段也可以是未被编译的，也就是说也可以使用liquid标签放在这些代码段中
+通过修改配置文件_coinfig.yml以及post和layouts就可以实现主要blog的建立和修改。</li>
+</ul>
 </span>
 
        
