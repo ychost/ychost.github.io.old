@@ -1,3 +1,19 @@
+#Rake settings
+post:
+  template: _post.txt
+  extension: md
+page:
+  template: _page.txt
+  extension: md
+editor: sublime
+git:
+  branch: master
+transfer:
+  command: robocopy
+  settings: /mir
+  source: _site\
+  destination:  git@github.com:ychost/ychost.github.io.git 
+
 # Site settings
 encoding: utf-8
 #the web title

@@ -1,0 +1,13 @@
+---
+layout: post
+title:
+date:
+summary:
+categories:
+thumbnail: lock
+author : ychost
+orginal : no
+tags:
+    -
+    - 
+---
