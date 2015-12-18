@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+<meta charset="utf-8" />
+<meta name="baidu-site-verification" content="KGkHBH2V5C" />
+<meta name="uyan_auth" content="a46c4fcaad" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大话设计模式</title>
+<meta name="description" content="">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/font/font-awesome-4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+<link rel="stylesheet" type="text/css" media="all" href="/css/jquery.mmenu.all.css" />
+<link rel="stylesheet" href="/css/highlightjs.piperita.css">
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/favicons/manifest.json">
+<link rel="shortcut icon" href="/favicons/favicon.ico">
+<script src="/js/jquery-1.11.0.mini.js"></script>
+<script src="/js/jquery.query.js"></script>
+
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
+<meta name="msapplication-config" content="/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+</head>
+
+
+    <body>
+
+    <nav id="my-menu">
+  <div>
+    <a class="my-home"><h1>ychost</h1></a>
+
+    <ul class="pages">
+      <li><a href="/"> <i class="fa fa-home"></i> 主页</a></li>
+      <li><a href="/posts/"><i class="fa fa-archive"></i> 文章</a></li>
+      <li><a href="/search/"><i class="fa fa-search"></i> 搜索</a></li>
+    </ul>
+
+    <p class="links">
+  <a href="http://weibo.com/SuDoYc" target="_new"><i class="fa fa-weibo"></i></a>
+  <a href="mailto:ychost@outlook.com" target="_new"><i class="fa fa-envelope-o"></i></a>
+  <a href="tencent://message/?uin=292538649" target="_new"><i class="fa fa-qq"></i></a>
+  <a href="https://github.com/ychost" target="_new"><i class="fa fa-github-alt"></i></a>
+  <!--a href="/feed.xml" target="_new"><i class="fa fa-rss"></i></a-->
+</p>
+
+  </div>
+</nav>
+<div class="menu-button" href="#menu"><i class="fa fa-bars"></i></div>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      <head>
+  <link rel="stylesheet" href="/css/markdown-themes/markdown.css">
+  <link rel="stylesheet" href="/css/markdown-themes/node-dark.css">
+</head>
+
+<div class="container-fluid single">
+  <div class="row">
+
+<div itemscope itemtype="http://schema.org/Article" class="col-md-12 article">      
+      <div class="thumb">
+        <i class="fa fa-lock fa-3x"></i>
+      </div>
+      
+
+      <h1 style="font-size:45px;font-weight:900"class="header"   itemprop="name">大话设计模式</h1>
+
+      <div class="author" style="font-size:24px">
+        <span><i style="font-style:normal;">
+
+          作者：
+          <span itemprop="author">
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span itemprop="name" class="author-post-name";><strong>
+                
+                    ychost
+                
+              </strong></span>
+            </span>
+          </span>
+
+
+         &nbsp;  时间：<span itemprop="datePublished" content="2014-08-28">18/12/2015</span>
+        </i>
+        
+           &nbsp;<span style="font-style:oblique">------ 转载请注明出处</span>
+        
+      </span>
+      </div>
+
+      <div class="markdown  node-dark " >
+        <span itemprop="articleBody"><div class="highlight"><pre><code class="language-" data-lang="">1.简单工厂模式
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">public class Operation {
+    private double numA = 0;
+    private double numB = 0;
+    public double NumA
+    {
+        get { return numA; }
+        set { numA = value; }
+    }
+    public double NumB
+    {
+        get { return numB; }
+        set { numB = value; }
+    }
+    public virtual double GetResult() {
+        double result = 0;
+        return result;
+    }
+}
+
+public class OperationAdd: Operation {
+    public override double GetResult() {
+        return NumA + NumB;
+    }
+}
+public class OperationSub: Operation {
+    public override double GetResult() {
+        return NumA - NumB;
+    }
+}
+public class OperationMul: Operation {
+    public override double GetResult() {
+        return NumA * NumB;
+    }
+}
+public class OperationDiv: Operation {
+    public override double GetResult() {
+        if (NumB == 0)
+            throw new Exception("被除数不能为0");
+        return NumA / NumB;
+    }
+}
+public class OperationFactory {
+    public static Operation createOperation(string operate) {
+        switch (operate) {
+            case "+":
+                return new OperationAdd();
+            case "-":
+                return new OperationSub();
+            case "x":
+                return new OperationMul();
+            case "/":
+                return new OperationDiv();
+            default:
+                return null;
+
+        }
+    }
+}
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">2.策略模式   [封装了变化]
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">public class OperationContext {
+        private Operation oper;
+        public OperationContext(string op) {
+            switch (op) {
+                case "+":
+                    oper = new OperationAdd();
+                    break;
+                case "-":
+                    oper = new OperationSub();
+                    break;
+                case "*":
+                    oper = new OperationMul();
+                    break;
+                case "/":
+                    oper = new OperationDiv();
+                    break;
+                case "#":
+                    oper = new OperationSqrt();
+                    break;
+            }
+        }
+        public double GetResult(double p1=0,double p2=0) {
+            oper.NumA = p1;
+            oper.NumB = p2;
+            return oper.GetResult();
+        }
+    }
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">3.单一职责原则 (SRP)
+  开放-封闭原则 (The Open-Closeed Principle, 简称OCP)
+    软件实体(类,模块,函数等等)应该是可以扩展的,但是不可以修改.[ADS]
+
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">4.依赖倒转原则 (抽象不应该依赖细节,细节应该依赖抽象. 针对接口编程,不要针对实现编程)
+    A.高层模块不应该依赖低层模块. 两个都应该依赖抽象
+    B.抽象不应该依赖细节，细节应该依赖抽象。[ASD]
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">5.里氏代换原则(LSP)：子类必须能够替换掉它们的父类型。[ASD]
+
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">6.装饰模式(Decorator),动态地 给一个对象添加一些额外的职责,就增加功能来说,
+    装饰模式比生成子类模式更灵活它把每个要装饰的功能放在单独的类中,并让这
+    些类包装它所要装饰的对象，因此，当需要执行特殊行为时，客户代码就可以
+    在运行时根据需要有选择地、按顺序地使用装饰功能包装的对象了[DP]
+
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">namespace DecoratorPattern {
+    class Person {
+            public Person() {
+
+            }
+            private String name;
+            public Person(string name) {
+                this.name = name;
+            }
+
+            public virtual void show() {
+                Console.WriteLine("装扮的{0}", name);
+            }
+        }
+        class Finery : Person {
+            protected Person componet;
+            public void Decorate(Person c) {
+                componet = c;
+            }
+            public override void show() {
+                if (componet != null)
+                    componet.show();
+            }
+        }
+
+        class TShirts: Finery {
+            public override void show() {
+                Console.WriteLine("大T恤");
+                base.show();
+            }
+        }
+
+        class BigTrouser: Finery {
+            public override void show() {
+                Console.WriteLine("垮裤");
+                base.show();
+            }
+        }
+
+
+        class Program {
+            static void Main(string[] args) {
+                Person p = new Person("小明");
+                Console.WriteLine("第一种装扮：");
+                TShirts ts = new TShirts();
+                BigTrouser bt = new BigTrouser();
+                ts.Decorate(p);
+                bt.Decorate(ts);
+                bt.show();
+                Console.ReadKey();
+            }
+        }
+    }
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">7.代理模式(Proxy)，为其他对象提供一种代理以控制对这个对象的访问[DP]
+    应用：
+        1. 远程代理，隐藏对象在于不同地址的空间。
+        2. 虚拟代理，根据需要创建开销很大的对象，通过它来存放实例化需要很长时间的真实对象
+        3. 安全代理，用来控制真实对象访问时的权限。
+        4. 智能指引，要调用真实对象时，代理处理另外一些事。
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">abstract class Subject{
+    public abstract void Request();
+
+
+}
+
+class RealSubject : Subject{
+    public override void Request(){
+        Console.WriteLine("真实的请求");
+    }
+}
+
+class Proxy : Subject{
+    RealSubject rs ;
+    public override void Request(){
+        if(rs == null)
+            rs = new RealSubject();
+        rs.Request();
+    }
+}
+
+static void main(string[] args){
+    Proxy proxy = new proxy();
+    proxy.Request();
+
+    Console.ReadKey();
+}
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">8.工厂方法模式(Factory  Method)，定义一个用于创建对象的接口，
+让子类决定实例化哪一个类。工厂方法使一个类的实例化延迟到其子类。
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">class oneClass{
+
+}
+class twoFactory{
+
+}
+interface IFactory{
+    void createFactory();
+}
+
+class OneFactory(): IFactory{
+    void createFactory(){
+        return new oneClass();
+    }
+}
+
+class TwoFactory(): IFactory{
+    void createFactory(){
+        return new twoFactory();
+    }
+}
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">9.原型模式(Prototype)，用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">class memberType {
+    private string mb;
+    public string Mb
+    {
+        get { return mb; }
+        set { mb = value; }
+    }
+}
+class concretePrototype : ICloneable {
+    memberType m;
+    public concretePrototype() {
+        m = new memberType();
+    }
+    private string id;
+    public String Id
+    {
+        get { return id; }
+        set { this.id = value; }
+    }
+    public void SetMem(string mb) {
+        m.Mb = mb;
+    }
+    public string GetMem() {
+        return m.Mb;
+    }
+    public object Clone() {
+        //浅复制
+        return (object)this.MemberwiseClone();
+    }
+    public object DeepClone() {
+        concretePrototype cp = new concretePrototype();
+        cp.Id = id;
+        cp.SetMem(this.m.Mb);
+        return cp;
+    }
+}
+static void Main(string[] args) {
+    concretePrototype cp = new concretePrototype();
+    cp.Id = "1";
+    cp.SetMem("cp");
+    concretePrototype cpClone =(concretePrototype) cp.Clone();
+    cpClone.Id = "2";
+    cpClone.SetMem("cpClone");
+    Console.WriteLine("protype: {0}\t  {1}", cp.Id, cp.GetMem());
+    Console.WriteLine("shadow: {0}\t  {1}", cpClone.Id, cpClone.GetMem());
+    concretePrototype cpDeepClone = (concretePrototype)cpClone.DeepClone();
+    cpDeepClone.Id = "3";
+    cpDeepClone.SetMem("cpDeepClone");
+    Console.WriteLine("deep: {0}\t  {1}", cpDeepClone.Id, cpDeepClone.GetMem());
+    Console.ReadKey();
+}
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">10.模板方法模式(Template Method)，定义一个操作中的算法骨架，而将一些步骤延迟到子类中。
+    模板方法使用使得子类可以不改变一个算法的结构即可重新定义该算法的某些特定步骤。
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">abstract class AbstractClass {
+    public abstract void Algorithm();
+    public void TemplateMethod() {
+        Algorithm();
+    }
+}
+
+class concreteClassA : AbstractClass {
+    public override void Algorithm() {
+        Console.WriteLine("算法A的具体实现");
+    }
+}
+
+class concreteClassB : AbstractClass {
+    public override void Algorithm() {
+        Console.WriteLine("算法B的具体实现");
+    }
+}
+
+static void Main(string[] args) {
+    AbstractClass c;
+    c = new concreteClassA();
+    c.TemplateMethod();
+    c = new concreteClassB();
+    c.TemplateMethod();
+
+    Console.ReadKey();
+}
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">11.迪米特法则(LoD)，如果两个类不比彼此直接通信， 那么这两个类就不应当发生直接的相互作用。
+    如果其中一个类需要调用另一个类的某一个方法的话，可以通过第三者转发这个调用。每一个类
+     都应该降低成员的访问权限。
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">12.外观模式(Facade)，为子系统的一组接口提供一个一致的界面，次模式定义了一个高层接口。
+这个接口使得这一子系统更加容易使用。
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">class SubSystemOne {
+    public void MethodOne() {
+        Console.WriteLine("子系统方法一");
+    }
+}
+class SubSystemTwo {
+    public void MethodTwo() {
+        Console.WriteLine("子系统方法二");
+    }
+}
+class Facade {
+    SubSystemOne one;
+    SubSystemTwo two;
+
+    public Facade() {
+        one = new SubSystemOne();
+        two = new SubSystemTwo();
+    }
+
+    public void MethodA() {
+        Console.WriteLine("\n方法组A() --- ");
+        one.MethodOne();
+        two.MethodTwo();
+    }
+    public void MethodB() {
+        Console.WriteLine("\n方法组B() --- ");
+        two.MethodTwo();
+    }
+}
+class Program {
+    static void Main(string[] args) {
+        Facade facade = new Facade();
+        facade.MethodA();
+        facade.MethodB();
+
+        Console.ReadKey();
+    }
+}
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">13.建造者模式(Builder)，将一个复杂的对象的构建与它的表示分离，使得同样的构建过程
+可以创建不同的表示。当创建复杂对象的算法应该独立于该对象的组成部分以及它们的装配
+方式时适用的模式。
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">class Product {
+    IList&lt;string&gt; parts = new List&lt;string&gt;();
+    public void Add(string part) {
+        parts.Add(part);
+    }
+    public void Show() {
+        Console.WriteLine("\n产品 创建 ----");
+        foreach(string part in parts) {
+            Console.WriteLine(part);
+        }
+    }
+
+}
+
+abstract class Builder {
+    public abstract void BuildPartA();
+    public abstract void BuildPartB();
+    public abstract Product GetResult();
+}
+
+class ConcreteBuilder1 : Builder {
+    private Product p = new Product();
+    public override void BuildPartA() {
+        p.Add("部件A");
+    }
+    public override void BuildPartB() {
+        p.Add("部件B");
+    }
+    public override Product GetResult() {
+        return p;
+    }
+}
+
+class ConcreteBuilder2 : Builder {
+    Product p = new Product();
+    public override void BuildPartA() {
+        p.Add("部件X");
+    }
+
+    public override void BuildPartB() {
+        p.Add("部件Y");
+    }
+
+    public override Product GetResult() {
+        return p;
+    }
+}
+
+class Director {
+    public void Construct(Builder b) {
+        b.BuildPartA();
+        b.BuildPartB();
+    }
+}
+static void Main(string[] args) {
+    Director dir = new Director();
+    Builder b1 = new ConcreteBuilder1();
+    Builder b2 = new ConcreteBuilder2();
+    dir.Construct(b1);
+    dir.Construct(b2);
+    Product p1 = b1.GetResult();
+    Product p2 = b2.GetResult();
+    p1.Show();
+    p2.Show();
+
+    Console.ReadKey();
+}
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">14.观察者模式(Publish/Subscribe)，定义了一种一对多的依赖关系，让多个观察者对象同
+时监听某一个主题对象。这个主题对象在状态发生变化时，会通知所有的观察者对象，使它
+们能够自动更新自己。
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">abstract class Observer {
+    public abstract void Update();
+}
+abstract class Subject {
+    private IList&lt;Observer&gt; obs = new List&lt;Observer&gt;();
+    public void Attach(Observer ob) {
+        obs.Add(ob);
+    }
+    public void Detach(Observer ob) {
+        obs.Remove(ob);
+    }
+    public void Notify() {
+        foreach (Observer ob in obs) {
+            ob.Update();
+        }
+    }
+
+
+}
+//事先声明委托
+public delegate void EventHandler();
+class ConcretSubject : Subject {
+
+    public event EventHandler deleUpdate;
+    private string subjectState;
+    public string SubjectState
+    {
+        get { return subjectState; }
+        set { subjectState = value; }
+    }
+
+    public void DeleNotify() {
+        deleUpdate();
+    }
+}
+
+class ConcretObserver : Observer {
+    private string name;
+    private string obState;
+    private ConcretSubject subject;
+    public ConcretObserver(ConcretSubject subject, string name) {
+        this.subject = subject;
+        this.name = name;
+    }
+    public override void Update() {
+        obState = subject.SubjectState;
+        Console.WriteLine("观察者{0}的新状态是{1}", name, obState);
+    }
+    public ConcretSubject Subject
+    {
+        get { return subject; }
+        set { subject = value;  }
+    }
+
+
+}
+
+static void Main(string[] args) {
+    ConcretSubject s = new ConcretSubject();
+    ConcretObserver ob1 = new ConcretObserver(s, "ob1");
+    ConcretObserver ob2 = new ConcretObserver(s, "ob2");
+    //不使用委托
+    s.Attach(ob1);
+    s.Attach(ob2);
+    s.SubjectState = "未使用委托";
+    s.Notify();
+    //使用委托
+    s.deleUpdate += new EventHandler(ob1.Update);
+    s.deleUpdate += new EventHandler(ob2.Update);
+    s.SubjectState = "使用了委托 ";
+    s.DeleNotify();
+    Console.ReadKey();
+}
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">15.抽象工厂模式(Abtract Factory)，提供一个创建一系列相关或相互依赖对象的接口，
+而无需指定它们具体的类。
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">class User {
+    private int id;
+    public int ID
+    {
+        get { return id; }
+        set { this.id = value; }
+    }
+}
+interface IUser {
+    void Insert(User user);
+    string GetUser(int id);
+}
+
+class SqlserverUser : IUser {
+    public void Insert(User user) {
+        Console.WriteLine("insert " + user.ID + " into Sqlserver");
+    }
+
+    public string GetUser(int id) {
+        Console.WriteLine("get user " + id + " from Sqlserver");
+        return id + "get";
+    }
+}
+class AccessUser : IUser {
+    public void Insert(User user) {
+        Console.WriteLine("insert " + user.ID + " into Access");
+    }
+
+    public string GetUser(int id) {
+        Console.WriteLine("get user " + id + " from Access");
+        return id + "get";
+    }
+}
+
+
+class DataAcess {
+    private static readonly string db = "Sqlserver";
+    private static readonly string dbAccess = "AccessUser";
+    private static readonly string dbAppsetting =
+                     ConfigurationManager.AppSettings["DB"];
+    //private static readonly string db = "Access";
+    //未使用反射
+    public static IUser CreateUser() {
+
+        IUser result = null;
+        switch (db) {
+            case "Sqlserver":
+                result = new SqlserverUser();
+                break;
+            case "Access":
+                result = new AccessUser();
+                break;
+        }
+        return result;
+    }
+    //使用反射
+    public static IUser CreateUserByReFlection() {
+        IUser result = (IUser)Assembly.Load("AbstractFactoryPattern").
+                        CreateInstance("AbstractFactoryPattern." + dbAccess);
+        return result;
+    }
+    //使用反射+配置文件
+    public static IUser createUserByAppSetting() {
+        IUser result = (IUser)Assembly.Load("AbstractFactoryPattern").
+                   CreateInstance("AbstractFactoryPattern." + dbAppsetting);
+        return result;
+    }
+
+}
+class Program {
+    static void Main(string[] args) {
+        User user = new User();
+        IUser iu = DataAcess.createUserByAppSetting();
+        iu.Insert(user);
+        Console.WriteLine(iu.GetUser(3));
+        Console.ReadKey();
+    }
+}
+</code></pre></div><div class="highlight"><pre><code class="language-" data-lang="">16.状态模式(State)，当一个对象的内在状态改变时允许改变其行为，
+这个对象看起来像是改变了其类。该模式主要解决的是当控制一个对
+象状态转换的条件表达式过于复杂的情况。把状态的判断逻辑转移
+到表示不同状态的一系列类当中，可以把复杂的判断逻辑简化。
+</code></pre></div></span>
+
+       
+
+        
+        <div class="tags">
+          <small>
+          <i class="fa fa-tags"></i>
+            设计模式, C#
+          </small>
+        </div>
+        
+
+      </div>
+
+      <div class="content-panel feedback">
+
+       如果你对此文章有更好的想法请 <a href="http://weibo.com/SuDoYc" target="_blank"><i class="fa fa-weibo"></i>ychost-wb</a> 或者直接在下面评论!
+      </div>
+
+      
+     <!--打分版，用户可以对当前新闻、游戏或者应用等进行1-5级的评分-->
+      <div id="SOHUCS"></div>
+      <script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+      <script type="text/javascript">
+          window._config = { showScore: true };
+          window.changyan.api.config({
+              appid: 'cys8B776p',
+              conf: 'prod_f5e62400886309bd420b5adfe00275c4'
+          });
+      </script>
+
+
+     
+      
+
+    </div>
+
+  </div>
+
+</div>
+
+      </div>
+    </div>
+
+    <div class="footer clearfix">
+  <div class="col-md-6">
+    楔子 <i class="fa fa-heart"></i>  <a target="_new" href="http://weibo.com/SuDoYc">八千里路</a>
+  </div>
+  <div class="col-md-6">
+    &lt;/&gt; on <a target="_new " href="https://github.com/ychost">Github</a> &nbsp;<i class="fa fa-github-alt"></i>
+  </div>
+</div>
+
+<script src="/js/bootstrap.mini.js"></script>
+<script src="/js/jquery.mmenu.min.all.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+
+  $(function(){
+
+  //MSIE 为IE11以下的检测，Trident.*rv[ :]*11\.为IE
+    if( /Android|webOS|iPhone|iPad|iPod|MSIE |Trident.*rv[ :]*11\.|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+              addOrginalFont();
+     }else{
+               addLsFont();
+     }
+
+      $("#my-menu").mmenu().on( "closed.mm", function() {
+            $(".menu-button").show();
+         });
+      $(".menu-button").click(function() {
+        $(".menu-button").hide();
+        $("#my-menu").trigger("open.mm");
+      });
+      //2015-12-12 12:18:56，关闭导航
+      $(".my-home").click(function() {
+        $("#my-menu").trigger("close.mm");
+      });
+   });
+</script>
+
+
+<script type="text/javascript">
+var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?7ad0006693dc5c547b2843f27ea0184b";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+</script>
+
+
+<script type="text/javascript">
+
+function addLsFont(){
+try {
+    if (localStorage.chenjishi) {
+        // 如果localStorage中有该字体，就直接取出来加载
+        addFont(localStorage.getItem("chenjishi"));
+    } else {
+
+        // 首次加载字体我们需要异步加载它
+        $.get("/font/xingshu/chenjishi.css", function(result){
+          // localStorage.chenjishi = result;
+          localStorage.setItem('chenjishi', result);
+           addFont(result);
+      });
+    }
+  }catch(err){
+      alert("请在电脑上用谷歌或者火狐浏览器吧，你这浏览器加载出来的不能忍");
+   }
+ }
+ function addFont(cssString) {
+   var doc=document;
+       var style=doc.createElement("style");
+       style.setAttribute("type", "text/css");
+
+       if(style.styleSheet){// IE
+           style.styleSheet.cssText = cssString;
+       } else {// w3c
+           var cssText = doc.createTextNode(cssString);
+           style.appendChild(cssText);
+       }
+       var heads = doc.getElementsByTagName("head");
+       if(heads.length)
+           heads[0].appendChild(style);
+       else
+           doc.documentElement.appendChild(style);
+ }
+
+
+function addOrginalFont(){
+  $.get("/font/xingshu/OrginalTTF.css", function(result){
+     addFont(result);
+});
+}
+
+</script>
+
+    </body>
+</html>

@@ -209,9 +209,9 @@ ruby dk.rb .install
 <li><p>gem的官方源网速很差，替换为淘宝的源</p></li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-gem" data-lang="gem">    gem sources --add https://ruby.taobao.org/
-  gem sources --remove https://rubygems.org/
-  gem srouces -l</code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">    <span class="n">gem</span> <span class="n">sources</span> <span class="o">--</span><span class="n">add</span> <span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">ruby</span><span class="p">.</span><span class="nf">taobao</span><span class="p">.</span><span class="nf">org</span><span class="o">/</span>
+  <span class="n">gem</span> <span class="n">sources</span> <span class="o">--</span><span class="n">remove</span> <span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">rubygems</span><span class="p">.</span><span class="nf">org</span><span class="o">/</span>
+  <span class="n">gem</span> <span class="n">srouces</span> <span class="o">-</span><span class="n">l</span></code></pre></figure>
 
 <h5>4.gem安装jekyll</h5>
 
@@ -219,7 +219,7 @@ ruby dk.rb .install
 <li>gem  命令</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-gem" data-lang="gem">  gem install jekyll</code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">  <span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span></code></pre></figure>
 
 <p><img src="/asset/iamges/2015-12-16-14.png" alt="">
 <img src="/asset/iamges/2015-12-16-15.png" alt=""></p>
@@ -236,7 +236,7 @@ ruby dk.rb .install
 
 <ul>
 <li>
-<figure class="highlight"><pre><code class="language-jekyll" data-lang="jekyll">jekyll serve</code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">jekyll</span> <span class="n">serve</span></code></pre></figure>
 <br/></li>
 <li><p><span style="color:red;font-weight:bold">根据相关提示用gem install 安装指定的依赖!!!<br />注意查看README.MD文件</span></p></li>
 <li><p><img src="/asset/iamges/2015-12-16-17.png" alt=""></p></li>
@@ -250,11 +250,11 @@ ruby dk.rb .install
 <li>git 命令</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-git" data-lang="git">  $git init
-$git add .
-$git commit –m ‘first blood’
-$git remote add blog https://github.com/userNmae/userName.github.io.git
-$git push blog master</code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">  <span class="vg">$git</span> <span class="n">init</span>
+<span class="vg">$git</span> <span class="n">add</span> <span class="o">.</span>
+<span class="vg">$git</span> <span class="n">commit</span> <span class="err">–</span><span class="n">m</span> <span class="err">‘</span><span class="n">first</span> <span class="n">blood</span><span class="err">’</span>
+<span class="vg">$git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">blog</span> <span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">github</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">userNmae</span><span class="o">/</span><span class="n">userName</span><span class="p">.</span><span class="nf">github</span><span class="p">.</span><span class="nf">io</span><span class="p">.</span><span class="nf">git</span>
+<span class="vg">$git</span> <span class="n">push</span> <span class="n">blog</span> <span class="n">master</span></code></pre></figure>
 
 <p><img src="/asset/iamges/2015-12-16-19.png" alt=""></p>
 
@@ -266,18 +266,18 @@ $git push blog master</code></pre></figure>
 <li>相关插件</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-git" data-lang="git">gem install kramdown // markdown语言解析包
-gem install pygments.rb // 代码高亮包
-gem install liquid // 编译生成的语言</code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">gem</span> <span class="n">install</span> <span class="n">kramdown</span> <span class="sr">//</span> <span class="n">markdown</span><span class="err">语言解析包</span>
+<span class="n">gem</span> <span class="n">install</span> <span class="n">pygments</span><span class="p">.</span><span class="nf">rb</span> <span class="sr">//</span> <span class="err">代码高亮包</span>
+<span class="n">gem</span> <span class="n">install</span> <span class="n">liquid</span> <span class="sr">//</span> <span class="err">编译生成的语言</span></code></pre></figure>
 
 <ul>
 <li><p><a href="http://jekyllbootstrap.com/usage/jekyll-quick-start.html">Jekyll-bootstrap</a> 教程</p></li>
 <li><p>主题安装、切换</p></li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-git" data-lang="git">$ rake theme:install
- git=https://github.com/jekyllbootstrap/theme-the-program.git
-$ rake theme:switch name="the-program"</code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="err">$</span> <span class="n">rake</span> <span class="n">theme</span><span class="ss">:install</span>
+ <span class="n">git</span><span class="o">=</span><span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="n">github</span><span class="p">.</span><span class="nf">com</span><span class="o">/</span><span class="n">jekyllbootstrap</span><span class="o">/</span><span class="n">theme</span><span class="o">-</span><span class="n">the</span><span class="o">-</span><span class="n">program</span><span class="p">.</span><span class="nf">git</span>
+<span class="err">$</span> <span class="n">rake</span> <span class="n">theme</span><span class="ss">:switch</span> <span class="nb">name</span><span class="o">=</span><span class="s2">"the-program"</span></code></pre></figure>
 
 <ul>
 <li>相关文件夹说明

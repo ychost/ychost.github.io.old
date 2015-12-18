@@ -1,6 +1,14 @@
 [
   
   {
+    "title"    : "大话设计模式",
+    "category" : "",
+    "tags"     : "设计模式, C#",
+    "url"      : "/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/2015/12/18/%E5%A4%A7%E8%AF%9D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/",
+    "date"     : "2015-12-18 00:00:00 +0800"
+    } ,
+    
+  {
     "title"    : "穿透路由器教程，在局域网电脑上搭建服务器",
     "category" : "",
     "tags"     : "作者太懒, 等待更新",
@@ -51,8 +59,8 @@
   {
     "title"    : "Sublime Text2 注册码一枚",
     "category" : "",
-    "tags"     : "作者太懒, 等待更新",
-    "url"      : "/%E7%AD%89%E5%BE%85%E6%9B%B4%E6%96%B0/2015/12/14/Sublime-Text2-%E6%B3%A8%E5%86%8C%E7%A0%81%E4%B8%80%E6%9E%9A/",
+    "tags"     : "Sublime Text2, 注册码",
+    "url"      : "/%E8%BD%AF%E4%BB%B6%E5%92%8C%E8%B0%90/2015/12/14/Sublime-Text2-%E6%B3%A8%E5%86%8C%E7%A0%81%E4%B8%80%E6%9E%9A/",
     "date"     : "2015-12-14 00:00:00 +0800"
     } ,
     
