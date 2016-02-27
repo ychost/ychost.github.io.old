@@ -30,7 +30,7 @@ title_description: "当天生的爱好发展成为一个强烈的愿望时，一
 author_avatar: "/avatar/avatar_sketch.jpg"
 
 #web_analytics tools
-baidu_analytics: "http://sitecenter.baidu.com/"
+#baidu_analytics: "http://sitecenter.baidu.com/"
 
 ##markdown theme
 #soruce: https://github.com/rhiokim/markdown-css
@@ -39,7 +39,7 @@ md_theme: node-dark
 
 ##comment system
 #param: changyan | uyan | no
-comment_os: changyan
+comment_os: uyan
 
 github_repository: https://github.com/ychost/ychost.github.io
 ##share links
